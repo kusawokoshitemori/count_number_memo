@@ -11,11 +11,15 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.tsx?$/, // TypeScriptファイルを対象
         exclude: /node_modules/,
         use: {
           loader: "ts-loader",
         },
+      },
+      {
+        test: /\.css$/, // CSSファイルを対象
+        use: ["style-loader", "css-loader"], // CSSローダーを使用
       },
     ],
   },

@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
+import Button from "./Button";
+import "../styles/components.css";
 
 const CounterBlock: React.FC = () => {
-  return <div>Block</div>;
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <div>Block</div>
+      <Button count={count} setCount={setCount} sign="-" />
+    </div>
+  );
 };
 
 export default CounterBlock;
