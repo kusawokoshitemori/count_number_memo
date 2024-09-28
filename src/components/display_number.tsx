@@ -5,7 +5,11 @@ const DisplayNumber = () => {
   return (
     <div className="display_number">
       <p>表示数 : </p>
-      <input type="number" placeholder="ここに数字を入力" />
+      <input
+        type="number"
+        placeholder="ここに数字を入力"
+        className="number-input"
+      />
       <button>決定</button>
     </div>
   );

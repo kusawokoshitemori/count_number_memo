@@ -63,13 +63,15 @@
 /* ここに表示数決めるやつ 
 .display_number {
 }*/
-
+/* input[type=number]のスピナーを隠す */
 .number-input::-webkit-inner-spin-button,
 .number-input::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
 .number-input {
-  -moz-appearance: textfield;
+  -webkit-appearance: none; /* Chrome/Safari */
+  -moz-appearance: textfield; /* Firefox */
+  appearance: none; /* 標準のプロパティ */
+  margin: 0; /* 余白をリセット */
 }
