@@ -4,15 +4,19 @@ import DisplayNumber from "./components/display_number";
 //import "./App.css"; // CSSファイルをインポート
 
 const App: React.FC = () => {
+  const [blockNumber, setBlockNumber] = useState(3);
   return (
     <div className="container">
       <div>
         <h1>CounterMemo(カウンターメモ)</h1>
         <p>カウンターとメモが使えるよ</p>
-        <DisplayNumber />
+        <DisplayNumber
+          blockNumber={blockNumber}
+          setBlockNumber={setBlockNumber}
+        />
       </div>
       <div>
-        {Array.from({ length: 2 }, (_, index) => (
+        {Array.from({ length: blockNumber }, (_, index) => (
           <CounterBlock key={index} />
         ))}
       </div>
