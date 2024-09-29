@@ -33,7 +33,8 @@
   align-items: center;
   border: 1px solid #ccc;
   border-radius: 5px;
-  width: 100%;
+  width: 98%;
+  margin: 1%;
 }
 
 /* testボックス関係のやつ*/
@@ -45,7 +46,7 @@
   border: 1px solid #ddd;
   width: 100%;
   text-align: center;
-  margin: 20px 0 0 0;
+  margin: 16px 0 0 0;
 }
 .testmemo_numbermemo {
   display: flex;
@@ -60,9 +61,20 @@
   font-size: 56px;
 }
 
-/* ここに表示数決めるやつ 
+/* ここに表示数決めるやつ */
 .display_number {
-}*/
+  display: flex;
+  flex-direction: row;
+}
+.display_number p {
+  padding: 0;
+  margin: 0 20px 0 0;
+  font-size: 36px;
+}
+.display_number input {
+  font-size: 36px;
+}
+
 /* input[type=number]のスピナーを隠す */
 .number-input::-webkit-inner-spin-button,
 .number-input::-webkit-outer-spin-button {
